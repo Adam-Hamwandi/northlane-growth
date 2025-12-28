@@ -232,3 +232,73 @@ nav {
   border-color: rgba(255, 255, 255, 0.6);
   color: #ffffff;
 }
+
+/* =========================
+   Hero polish
+========================== */
+
+.hero__content {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.hero h1 {
+  letter-spacing: -0.02em;
+}
+
+.hero__lead {
+  max-width: 60ch;
+}
+
+.hero__note {
+  opacity: 0.85;
+}
+
+/* =========================
+   Hero responsive refinements
+========================== */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+  .hero .container {
+    min-height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: var(--font-size-display-sm);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero .container {
+    min-height: auto;
+    padding-block: var(--space-2xl);
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__eyebrow {
+    font-size: var(--font-size-xs);
+  }
+
+  .hero h1 {
+    font-size: 2.25rem; /* intentional clamp for small screens */
+  }
+
+  .hero__lead {
+    font-size: var(--font-size-base);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
