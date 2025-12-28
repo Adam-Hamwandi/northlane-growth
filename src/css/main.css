@@ -60,9 +60,9 @@ button {
 }
 
 /* Vertical rhythm for main content */
-main {
+/* main {
   padding-block: var(--space-xl);
-}
+} */
 
 /* Default section spacing */
 section {
@@ -127,5 +127,108 @@ nav {
 
 .nav-list a.cta:hover {
   background-color: var(--color-cta-hover);
+  color: #ffffff;
+}
+
+/* 
+  Hero Section
+  */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../../public/images/northlane-growth-hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero .container {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+.hero__content {
+  max-width: 800px;
+  background-color: transparent;
+}
+
+.hero__eyebrow {
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+/* Main headline */
+.hero h1 {
+  font-size: var(--font-size-display-md);
+  margin-bottom: var(--space-md);
+  color: var(--color-bg-page);
+}
+.hero__lead {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-loose);
+  margin-bottom: var(--space-lg);
+  color: var(--color-bg-page);
+}
+
+/* Actions */
+.hero__actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+/* Note */
+.hero__note {
+  font-size: var(--font-size-sm);
+  color: #d1d5db;
+}
+
+/* =========================
+   Buttons
+========================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: background-color var(--duration-fast) var(--easing-standard),
+    color var(--duration-fast) var(--easing-standard),
+    border-color var(--duration-fast) var(--easing-standard);
+}
+
+/* Primary CTA */
+.button--primary {
+  background-color: var(--color-cta);
+  color: #ffffff;
+}
+
+.button--primary:hover {
+  background-color: var(--color-cta-hover);
+  color: #ffffff;
+}
+
+/* Secondary CTA */
+.button--secondary {
+  background-color: transparent;
+  color: var(--color-bg-page);
+  border: var(--border-width-hairline) solid rgba(255, 255, 255, 0.4);
+}
+
+.button--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
   color: #ffffff;
 }
