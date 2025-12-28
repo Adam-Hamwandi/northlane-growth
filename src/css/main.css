@@ -89,10 +89,8 @@ nav {
   gap: var(--space-xl);
 }
 
-.logo {
-  font-weight: 700;
-  color: var(--color-cta);
-  font-size: var(--font-size-xl);
+.logo img {
+  max-width: 10em;
 }
 
 /* =========================
@@ -105,7 +103,7 @@ nav {
   color: var(--color-text-body);
   font-size: var(--font-size-lg);
   transition: color var(--duration-fast) var(--easing-standard);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .nav-list li a:hover {
@@ -114,8 +112,8 @@ nav {
 
 /* Active page state */
 .nav-list a[aria-current="page"] {
-  color: var(--color-primary);
-  font-weight: 600;
+  color: var(--color-cta);
+  font-weight: 700;
 }
 
 /* CTA link (Contact) */
