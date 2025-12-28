@@ -301,3 +301,103 @@ nav {
     justify-content: center;
   }
 }
+
+/* 
+  Services Section
+*/
+.services {
+  background-color: var(--color-bg-surface);
+  padding-block: var(--space-3xl);
+}
+
+.services__header {
+  max-width: 640px;
+  margin-bottom: var(--space-2xl);
+  background-color: transparent;
+}
+
+.services__intro {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-body);
+}
+
+/* Grid */
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* Card */
+.service {
+  background-color: var(--color-bg-page);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease;
+}
+.service:hover {
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Icon */
+.service__icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: var(--space-md);
+
+  background-color: var(--color-accent-surface);
+  border-radius: var(--radius-md);
+  color: var(--color-accent);
+  transition: all 0.3s ease;
+}
+
+.service__icon:hover {
+  scale: 1.2;
+  transition: all 0.3s ease;
+}
+
+.service__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Titles */
+.service h3 {
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-size-xl);
+}
+
+/* Text */
+.service p {
+  color: var(--color-text-body);
+}
+
+/* =========================
+   Services responsive
+========================== */
+
+@media (max-width: 1024px) {
+  .services__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services {
+    padding-block: var(--space-2xl);
+  }
+
+  .services__list {
+    grid-template-columns: 1fr;
+  }
+
+  .service {
+    padding: var(--space-lg);
+  }
+}
