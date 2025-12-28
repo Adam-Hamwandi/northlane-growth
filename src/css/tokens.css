@@ -1,0 +1,122 @@
+:root {
+  /* 
+    Base color raw values
+    Do not use these directly in components unless absolutely necessary.
+    Use the semantic tokens defined below instead.
+    */
+  --c-bg-100: #f6f6f6;
+  --c-bg-200: #efefef;
+
+  --c-text-900: #2c2e33;
+  --c-text-700: #4c4c4c;
+
+  --c-brand-700: #1b3e89;
+  --c-brand-800: #182f60;
+
+  --c-accent-600: #4a5fb0;
+  --c-accent-100: #dee3f9;
+
+  /* =========================
+     Semantic tokens (USE THESE)
+  ========================== */
+  --color-bg-page: var(--c-bg-100);
+  --color-bg-surface: var(--c-bg-200);
+
+  --color-text-heading: var(--c-text-900);
+  --color-text-body: var(--c-text-700);
+
+  --color-cta: var(--c-brand-700);
+  --color-cta-hover: var(--c-brand-800);
+
+  --color-accent: var(--c-accent-600);
+  --color-accent-surface: var(--c-accent-100);
+
+  /* 
+  Font Family
+  */
+  --font-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+
+  /* =========================
+     Base typography (UI & content)
+     Used everywhere by default
+  ========================== */
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.5rem; /* 24px */
+  --font-size-2xl: 2rem; /* 32px */
+
+  /* =========================
+     Display typography (marketing / hero)
+     Used intentionally, NOT everywhere
+  ========================== */
+  --font-size-display-sm: 3rem; /* 48px */
+  --font-size-display-md: 3.5rem; /* 56px */
+  --font-size-display-lg: 4rem; /* 64px */
+
+  /* =========================
+     Line heights
+  ========================== */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.7;
+
+  /* =========================
+     Spacing tokens
+     Use for margin, padding, gaps
+  ========================== */
+
+  --space-2xs: 0.25rem; /* 4px */
+  --space-xs: 0.5rem; /* 8px */
+  --space-sm: 0.75rem; /* 12px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 1.5rem; /* 24px */
+  --space-xl: 2rem; /* 32px */
+  --space-2xl: 3rem; /* 48px */
+  --space-3xl: 4rem; /* 64px */
+
+  /* =========================
+     Border radius
+  ========================== */
+  --radius-xs: 0.25rem; /* 4px */
+  --radius-sm: 0.375rem; /* 6px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
+
+  /* =========================
+     Borders
+  ========================== */
+  --border-width-hairline: 1px;
+  --border-width-thick: 2px;
+
+  /* =========================
+     Shadows (subtle, B2B-safe)
+  ========================== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.12);
+
+  /* =========================
+     Z-index scale
+     Use ONLY these values
+  ========================== */
+  --z-base: 0;
+  --z-header: 10;
+  --z-dropdown: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-toast: 50;
+
+  /* =========================
+     Motion / animation tokens
+  ========================== */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+}

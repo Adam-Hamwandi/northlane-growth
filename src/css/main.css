@@ -1,0 +1,133 @@
+@import "./reset.css";
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-body);
+  background-color: var(--color-bg-page);
+}
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text-heading);
+  font-weight: 800;
+  line-height: var(--line-height-tight);
+}
+
+/* Paragraphs */
+p {
+  color: var(--color-text-body);
+  line-height: var(--line-height-normal);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+}
+
+/* =========================
+   Layout primitives
+========================== */
+
+/* Page wrapper */
+.container {
+  max-width: 1400px;
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+
+/* Vertical rhythm for main content */
+main {
+  padding-block: var(--space-xl);
+}
+
+/* Default section spacing */
+section {
+  margin-bottom: var(--space-2xl);
+}
+
+/* =========================
+   Header structure
+========================== */
+
+header {
+  background-color: var(--color-bg-page);
+  border-bottom: var(--border-width-hairline) solid var(--color-border);
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--color-cta);
+  font-size: var(--font-size-xl);
+}
+
+/* =========================
+   Header interactions
+========================== */
+
+/* Nav links */
+.nav-list a {
+  position: relative;
+  color: var(--color-text-body);
+  font-size: var(--font-size-lg);
+  transition: color var(--duration-fast) var(--easing-standard);
+  font-weight: 600;
+}
+
+.nav-list li a:hover {
+  color: var(--color-accent);
+}
+
+/* Active page state */
+.nav-list a[aria-current="page"] {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* CTA link (Contact) */
+.nav-list a.cta {
+  padding: var(--space-xs) var(--space-lg);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-cta);
+  color: #ffffff;
+  transition: background-color var(--duration-fast) var(--easing-standard);
+}
+
+.nav-list a.cta:hover {
+  background-color: var(--color-cta-hover);
+  color: #ffffff;
+}
