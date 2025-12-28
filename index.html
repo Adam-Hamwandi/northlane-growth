@@ -13,18 +13,31 @@
   <body>
     <header>
       <div class="container">
-        <nav aria-label="Primary navigation">
-          <a href="#" class="logo">
-            <img src="public/images/logo.svg" alt="Northlane Growth" />
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="/" class="logo">
+            <img src="/images/logo.svg" alt="Northlane Growth" />
           </a>
 
-          <ul class="nav-list">
-            <li><a href="#" aria-current="page">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="industries.html">Industries</a></li>
-            <li><a href="case-studies.html">Case Studies</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" class="cta">Contact</a></li>
+          <!-- Hamburger button -->
+          <button
+            class="nav__toggle"
+            aria-controls="primary-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <span class="nav__bar"></span>
+            <span class="nav__bar"></span>
+            <span class="nav__bar"></span>
+          </button>
+
+          <!-- Menu -->
+          <ul id="primary-menu" class="nav-list">
+            <li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/industries.html">Industries</a></li>
+            <li><a href="/case-studies.html">Case Studies</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html" class="cta">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -235,5 +248,7 @@
     <footer>
       <p>© Northlane Growth</p>
     </footer>
+
+    <script src="/src/script/main.js" defer></script>
   </body>
 </html>
