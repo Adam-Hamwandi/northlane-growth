@@ -201,3 +201,12 @@ if (contactForm) {
     alert("Thanks! Your message has been sent.");
   });
 }
+
+/* =========================
+   Footer dynamic year
+========================== */
+
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = String(new Date().getFullYear());
+}
