@@ -865,3 +865,74 @@ header {
     font-size: var(--font-size-2xl);
   }
 }
+
+/* =========================
+   Primary CTA section
+========================== */
+
+.cta--section {
+  background-image: url("../../public/images/northlane-growth-cta-background.webp");
+  padding-block: var(--space-3xl);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta__content {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+#cta-title {
+  font-size: var(--font-size-display-md);
+  color: var(--color-bg-page);
+  margin-bottom: var(--space-md);
+}
+
+.cta__lead {
+  font-size: var(--font-size-lg);
+  color: var(--color-bg-surface);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.cta__actions {
+  margin-bottom: var(--space-md);
+}
+
+.cta__note {
+  font-size: var(--font-size-sm);
+  color: var(--color-bg-surface);
+}
+
+/* =========================
+   CTA responsive
+========================== */
+
+@media (max-width: 640px) {
+  .cta--section {
+    padding-block: var(--space-2xl);
+  }
+
+  #cta-title {
+    font-size: 2.25rem; /* intentional clamp for small screens */
+  }
+
+  .cta__lead {
+    font-size: var(--font-size-base);
+  }
+
+  .cta__content {
+    text-align: left;
+  }
+
+  .cta__actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
