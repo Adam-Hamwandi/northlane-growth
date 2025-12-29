@@ -644,3 +644,167 @@ header {
     text-align: center;
   }
 }
+
+/* Pricing section */
+
+/* =========================
+   Pricing section
+========================== */
+
+.pricing {
+  background-color: var(--color-bg-surface);
+  padding-block: var(--space-3xl);
+}
+
+.pricing__header {
+  max-width: 640px;
+  margin-bottom: var(--space-2xl);
+}
+
+.pricing__intro {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-body);
+}
+
+/* =========================
+   Billing toggle
+========================== */
+
+.pricing__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-2xl);
+}
+
+.pricing__toggle-button {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-md);
+  border: var(--border-width-hairline) solid var(--color-border);
+  background-color: var(--color-bg-page);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pricing__toggle-button[aria-pressed="true"] {
+  background-color: var(--color-cta);
+  color: #ffffff;
+  border-color: var(--color-cta);
+}
+
+.pricing__savings {
+  margin-left: var(--space-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* =========================
+   Pricing grid
+========================== */
+
+.pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+/* =========================
+   Pricing cards
+========================== */
+
+.pricing-card {
+  background-color: var(--color-bg-page);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card__header {
+  margin-bottom: var(--space-md);
+}
+
+.pricing-card__description {
+  color: var(--color-text-body);
+}
+
+/* Price */
+.pricing-card__price {
+  margin-bottom: var(--space-lg);
+}
+
+.pricing-card__amount {
+  font-size: var(--font-size-display-sm);
+  font-weight: 800;
+  color: var(--color-text-heading);
+}
+
+.pricing-card__period {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-body);
+  margin-left: 0.25rem;
+}
+
+/* Features */
+.pricing-card__features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--space-xl);
+}
+
+.pricing-card__features li {
+  margin-bottom: var(--space-sm);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.pricing-card__features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* CTA alignment */
+.pricing-card .button {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+}
+
+/* =========================
+   Featured plan
+========================== */
+
+.pricing-card--featured {
+  border: 2px solid var(--color-accent);
+  transform: translateY(-4px);
+}
+
+/* =========================
+   Pricing responsive
+========================== */
+
+@media (max-width: 1024px) {
+  .pricing__plans {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pricing {
+    padding-block: var(--space-2xl);
+  }
+
+  .pricing__plans {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing__toggle {
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+}

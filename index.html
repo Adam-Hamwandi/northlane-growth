@@ -15,7 +15,7 @@
       <div class="container">
         <nav class="nav" aria-label="Primary navigation">
           <a href="/" class="logo">
-            <img src="/images/logo.svg" alt="Northlane Growth" />
+            <img src="/images/logo.svg" alt="Northlane Growth Logo" />
           </a>
 
           <!-- Hamburger button -->
@@ -70,8 +70,8 @@
           </header>
         </div>
       </section>
-      <!-- Services section -->
 
+      <!-- Services section -->
       <section class="services" aria-labelledby="services-title">
         <div class="container">
           <header class="services__header">
@@ -243,8 +243,125 @@
           </div>
         </div>
       </section>
-    </main>
 
+      <!-- Pricing table -->
+      <section class="pricing" aria-labelledby="pricing-title">
+        <div class="container">
+          <!-- Section header -->
+          <header class="pricing__header">
+            <h2 id="pricing-title">Simple, transparent pricing</h2>
+            <p class="pricing__intro">
+              Flexible engagement models designed for growing B2B teams. No
+              long-term contracts. Cancel anytime.
+            </p>
+          </header>
+
+          <!-- Billing toggle -->
+          <div class="pricing__toggle" role="group" aria-label="Billing period">
+            <button
+              type="button"
+              class="pricing__toggle-button"
+              aria-pressed="false"
+              data-billing="monthly"
+            >
+              Monthly
+            </button>
+
+            <button
+              type="button"
+              class="pricing__toggle-button"
+              aria-pressed="true"
+              data-billing="yearly"
+            >
+              Yearly
+            </button>
+
+            <span class="pricing__savings" hidden> Save 20% with yearly </span>
+          </div>
+
+          <!-- Pricing plans -->
+          <div class="pricing__plans">
+            <!-- Starter -->
+            <article class="pricing-card">
+              <header class="pricing-card__header">
+                <h3>Starter</h3>
+                <p class="pricing-card__description">
+                  For early-stage teams validating channels.
+                </p>
+              </header>
+
+              <div class="pricing-card__price" data-monthly="499">
+                <span class="pricing-card__amount">$499</span>
+                <span class="pricing-card__period">/mo</span>
+              </div>
+
+              <ul class="pricing-card__features">
+                <li>Paid media setup & management</li>
+                <li>Basic conversion tracking</li>
+                <li>Monthly performance report</li>
+                <li>Email support</li>
+              </ul>
+
+              <a href="/contact.html" class="button button--primary">
+                Get started
+              </a>
+            </article>
+
+            <!-- Growth (featured) -->
+            <article class="pricing-card pricing-card--featured">
+              <header class="pricing-card__header">
+                <h3>Growth</h3>
+                <p class="pricing-card__description">
+                  For teams focused on predictable pipeline growth.
+                </p>
+              </header>
+
+              <div class="pricing-card__price" data-monthly="560">
+                <span class="pricing-card__amount">$560</span>
+                <span class="pricing-card__period">/mo</span>
+              </div>
+
+              <ul class="pricing-card__features">
+                <li>Paid media + SEO execution</li>
+                <li>Conversion rate optimization</li>
+                <li>Advanced analytics & dashboards</li>
+                <li>Bi-weekly strategy calls</li>
+              </ul>
+
+              <a href="/contact.html" class="button button--primary">
+                Book a strategy call
+              </a>
+            </article>
+
+            <!-- Scale -->
+            <article class="pricing-card">
+              <header class="pricing-card__header">
+                <h3>Scale</h3>
+                <p class="pricing-card__description">
+                  For companies scaling aggressively across channels.
+                </p>
+              </header>
+
+              <div class="pricing-card__price" data-monthly="1500">
+                <span class="pricing-card__amount">$1,500</span>
+                <span class="pricing-card__period">/mo</span>
+              </div>
+
+              <ul class="pricing-card__features">
+                <li>Full-funnel growth strategy</li>
+                <li>Experimentation & A/B testing</li>
+                <li>Custom reporting & insights</li>
+                <li>Dedicated growth partner</li>
+              </ul>
+
+              <a href="/contact.html" class="button button--primary">
+                Talk to sales
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer>
       <p>© Northlane Growth</p>
     </footer>
