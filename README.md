@@ -105,7 +105,23 @@ The site is designed to be usable and understandable for all users.
 
 ## Screenshots
 
-Screenshots showcasing the homepage layout, responsiveness, and key sections can be found in the `/screenshots` directory.
+Screenshots showcasing the homepage layout, responsiveness, and key sections can be found in the `/public/screenshots` directory.
+
+### Homepage – Desktop
+
+![Homepage Desktop](./public/screenshots/homepage-desktop.png)
+
+### Homepage – IPad
+
+![Homepage IPad](./public/screenshots/homepage-IPad.png)
+
+### Homepage - IPad Mini
+
+![IPad Mini Homepage](./public/screenshots/homepage-ipad-mini.png)
+
+### Homepage - Mobile
+
+![Homepage Mobile](./public/screenshots/homepage-mobile.png)
 
 ---
 
