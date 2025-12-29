@@ -1120,3 +1120,116 @@ textarea[aria-invalid="true"] {
     font-size: var(--font-size-base);
   }
 }
+
+/* =========================
+   Footer
+========================== */
+
+.footer {
+  background-color: var(--color-cta); /* primary brand blue */
+  color: #ffffff;
+  padding-top: var(--space-3xl);
+}
+
+.footer a {
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* =========================
+   Footer grid
+========================== */
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-2xl);
+}
+
+/* Brand */
+.footer__logo {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-sm);
+  color: var(--color-accent-surface);
+}
+
+.footer__description {
+  font-size: var(--font-size-base);
+  opacity: 0.9;
+  max-width: 40ch;
+  color: var(--color-bg-surface);
+}
+
+/* Columns */
+.footer__heading {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+  color: var(--color-accent-surface);
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__list li {
+  margin-bottom: var(--space-xs);
+}
+
+/* Contact */
+.footer__contact p {
+  margin-bottom: var(--space-xs);
+}
+
+/* =========================
+   Bottom bar
+========================== */
+
+.footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-block: var(--space-md);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  opacity: 0.9;
+}
+.footer__bottom p {
+  color: var(--color-bg-surface);
+}
+
+/* =========================
+   Footer responsive
+========================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .footer {
+    padding-top: var(--space-2xl);
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .footer__bottom {
+    text-align: left;
+  }
+}
