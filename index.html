@@ -389,6 +389,179 @@
           </div>
         </div>
       </section>
+
+      <!-- Contact Section -->
+      <section class="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact__grid">
+            <!-- Left: Visual -->
+            <div class="contact__visual" aria-hidden="true">
+              <img
+                src="./public/images/northlane-growth-contact-image.webp"
+                alt="Northlane Growth contact form image"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Right: Form -->
+            <div class="contact__form-wrapper">
+              <header class="contact__header">
+                <h2 id="contact-title">Let’s talk about your growth goals</h2>
+                <p class="contact__intro">
+                  Tell us a bit about your business and what you’re trying to
+                  achieve. We’ll get back to you within one business day.
+                </p>
+              </header>
+
+              <form
+                class="contact-form"
+                novalidate
+                aria-describedby="contact-form-note"
+              >
+                <!-- Name -->
+                <div class="form-field">
+                  <label for="full-name">Full name</label>
+                  <input
+                    type="text"
+                    id="full-name"
+                    name="fullName"
+                    required
+                    autocomplete="name"
+                  />
+                  <span class="form-error" id="error-name" hidden>
+                    Please enter your full name.
+                  </span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-field">
+                  <label for="email">Work email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                  />
+                  <span class="form-error" id="error-email" hidden>
+                    Please enter a valid work email address.
+                  </span>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-field">
+                  <label for="phone">Phone number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    autocomplete="tel"
+                  />
+                  <span class="form-error" id="error-phone" hidden>
+                    Please enter a valid phone number.
+                  </span>
+                </div>
+
+                <!-- Company -->
+                <div class="form-field">
+                  <label for="company">Company name</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    autocomplete="organization"
+                  />
+                </div>
+
+                <!-- Reason (checkboxes) -->
+                <fieldset class="form-field">
+                  <legend>What are you looking for?</legend>
+
+                  <label>
+                    <input type="checkbox" name="reason" value="paid-media" />
+                    Paid media growth
+                  </label>
+
+                  <label>
+                    <input type="checkbox" name="reason" value="seo" />
+                    SEO & organic growth
+                  </label>
+
+                  <label>
+                    <input type="checkbox" name="reason" value="cro" />
+                    Conversion rate optimization
+                  </label>
+
+                  <label>
+                    <input type="checkbox" name="reason" value="full-funnel" />
+                    Full-funnel growth strategy
+                  </label>
+                </fieldset>
+
+                <!-- Budget (radio) -->
+                <fieldset class="form-field">
+                  <legend>Monthly budget range</legend>
+
+                  <label>
+                    <input
+                      type="radio"
+                      name="budget"
+                      value="under-1k"
+                      required
+                    />
+                    Under $1,000
+                  </label>
+
+                  <label>
+                    <input type="radio" name="budget" value="1k-3k" />
+                    $1,000 – $3,000
+                  </label>
+
+                  <label>
+                    <input type="radio" name="budget" value="3k-5k" />
+                    $3,000 – $5,000
+                  </label>
+
+                  <label>
+                    <input type="radio" name="budget" value="5k-plus" />
+                    $5,000+
+                  </label>
+
+                  <span class="form-error" id="error-budget" hidden>
+                    Please select a budget range.
+                  </span>
+                </fieldset>
+
+                <!-- Message -->
+                <div class="form-field">
+                  <label for="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                  ></textarea>
+                  <span class="form-error" id="error-message" hidden>
+                    Please tell us a bit more about your needs.
+                  </span>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-actions">
+                  <button type="submit" class="button button--primary">
+                    Send message
+                  </button>
+                </div>
+
+                <p id="contact-form-note" class="contact__note">
+                  We’ll never share your information. No spam. No pressure.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <p>© Northlane Growth</p>
