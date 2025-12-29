@@ -106,3 +106,98 @@ pricingToggleButtons.forEach((button) => {
 
 // ✅ Always start in MONTHLY mode on page load
 setBillingMode("monthly");
+
+/* =========================
+   Contact form validation
+========================== */
+
+const contactForm = document.querySelector(".contact-form");
+
+if (contactForm) {
+  const fields = {
+    name: contactForm.querySelector("#full-name"),
+    email: contactForm.querySelector("#email"),
+    phone: contactForm.querySelector("#phone"),
+    budget: contactForm.querySelectorAll('input[name="budget"]'),
+    message: contactForm.querySelector("#message"),
+  };
+
+  function showError(input, errorId) {
+    input.setAttribute("aria-invalid", "true");
+    const error = document.getElementById(errorId);
+    if (error) error.hidden = false;
+  }
+
+  function clearError(input, errorId) {
+    input.removeAttribute("aria-invalid");
+    const error = document.getElementById(errorId);
+    if (error) error.hidden = true;
+  }
+
+  function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function isValidPhone(phone) {
+    return /^[0-9+\-\s()]{7,}$/.test(phone);
+  }
+
+  function isBudgetSelected() {
+    return Array.from(fields.budget).some((radio) => radio.checked);
+  }
+
+  contactForm.addEventListener("submit", (e) => {
+    let isValid = true;
+
+    /* Name */
+    if (!fields.name.value.trim()) {
+      showError(fields.name, "error-name");
+      isValid = false;
+    } else {
+      clearError(fields.name, "error-name");
+    }
+
+    /* Email */
+    if (!isValidEmail(fields.email.value)) {
+      showError(fields.email, "error-email");
+      isValid = false;
+    } else {
+      clearError(fields.email, "error-email");
+    }
+
+    /* Phone */
+    if (!isValidPhone(fields.phone.value)) {
+      showError(fields.phone, "error-phone");
+      isValid = false;
+    } else {
+      clearError(fields.phone, "error-phone");
+    }
+
+    /* Budget */
+    const budgetError = document.getElementById("error-budget");
+    if (!isBudgetSelected()) {
+      if (budgetError) budgetError.hidden = false;
+      isValid = false;
+    } else {
+      if (budgetError) budgetError.hidden = true;
+    }
+
+    /* Message */
+    if (!fields.message.value.trim()) {
+      showError(fields.message, "error-message");
+      isValid = false;
+    } else {
+      clearError(fields.message, "error-message");
+    }
+
+    if (!isValid) {
+      e.preventDefault();
+      return;
+    }
+
+    /* Success state (for now) */
+    e.preventDefault();
+    contactForm.reset();
+    alert("Thanks! Your message has been sent.");
+  });
+}
