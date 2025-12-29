@@ -68,6 +68,10 @@ section {
   margin-bottom: var(--space-2xl);
 }
 
+main {
+  z-index: 10;
+}
+
 /* =========================
    Header interactions
 ========================== */
@@ -138,8 +142,10 @@ section {
 
 header {
   position: relative;
-  z-index: 1000;
+  top: 0;
+  background-color: var(--color-bg-page);
 }
+
 .logo img {
   width: 130px;
 }
@@ -413,6 +419,7 @@ header {
 .services {
   background-color: var(--color-bg-surface);
   padding-block: var(--space-3xl);
+  z-index: -10;
 }
 
 .services__header {
